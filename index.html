@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Backbone Store</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<div id="store" class="store">
+			<div class="open-bascet" id="open-bascet">
+				КОРЗИНА				
+			</div>
+		</div>
+		<div id="bascet" class="bascet">
+			<div class="close-bascet" id="close-bascet">
+				X
+			</div>
+		</div>
+        <script id="storeTemplate" type="text/template">
+            <h1><%= name %></h1>
+            <div class="right">
+	            <div class="price">Цена: <%= price %> руб.</div>
+	            <div class="less">-</div>
+	            <input type="number" min="1" value="1">
+	            <div class="more">+</div>
+	            <div class="add_to_bascet">
+	            	Добавить
+	            </div>            	
+            </div>
+        </script>
+        <script id="bascetTemplate" type="text/template">
+            <h1><%= name %></h1>
+            <div class="right">
+	            <div  class="price">Цена: <%= price %> руб.</div>
+	            <div class="less">-</div>
+	            <input class="count" type="number" min="1" value="<%= count %>">
+	            <div class="more">+</div>
+	            <div class="del_from_bascet">
+	            	Удалить
+	            </div>
+	        </div>
+        </script>
+        <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/underscore.js"></script>
+        <script src="js/backbone.js"></script>
+        <script src="js/backbone.localStorage.js"></script>
+        <script src="js/json2.js"></script>
+        <script src="js/app.js"></script>
+	
+</body>
+</html>
